@@ -1,0 +1,88 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Light Professional Background */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background: linear-gradient(to right, #e3f2fd, #f8fbff);
+  color: #333;
+  padding: 20px;
+}
+
+/* Header */
+header {
+  background: #2563eb;
+  color: #ffffff;
+  padding: 20px;
+  text-align: center;
+  border-radius: 8px;
+}
+
+header h1 {
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+/* Navigation */
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: right;
+  gap: 20px;
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #dbeafe;
+}
+
+/* Sections */
+section {
+  margin: 40px 0;
+  padding: 25px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+h2 {
+  margin-bottom: 15px;
+  color: #2563eb;
+}
+
+ul li {
+  margin-bottom: 8px;
+}
+
+/* Project Card */
+.project-card {
+  background: #f1f5f9;
+  padding: 15px;
+  margin: 15px 0;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.project-card:hover {
+  background: #e2e8f0;
+  transform: translateY(-5px);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 40px;
+  padding-top: 15px;
+  border-top: 1px solid #ccc;
+  color: #555;
+}
