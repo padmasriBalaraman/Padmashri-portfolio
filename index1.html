@@ -18,7 +18,7 @@
     </header>
     <section id="Home">
     <h1>Home</h1>
-    <p><strong>PADMASRI</strong></p>
+    <h2><strong>PADMASRI.B</strong></h2>
     <p><strong>Front End Developer | CSE Student</strong></p>
     <p>I am a passionate Frontend Developer and Computer Science student. I Enjoy creating responsive User
         friendly websites using HTML,CSS and Javascript.</p>
@@ -97,7 +97,7 @@
         and business.</p>
     </section>
 
-    
+
     <section id="Contact">
 
         <h2>Contact Information</h2>
@@ -110,5 +110,30 @@
         <input type="tel" id="mobile" name="mobile"><br>
         </form>
     </section>
+    <button onclick="changecolor">Click Me</button>
+    <p id="cnt" style="background-color:yellow;color:black"></p>
+    <button onclick="decrease()">-</button><br>
+    <button onclick="increase()">+</button>
+    <footer>
+        <p> &copy; 2025 year name. All right reserved.</p>
+    </footer>
+    <script>
+        document.getElementsByTagName("h1").innerHTML("Padmasri");
+        document.getElementsByTagName("h1")[0].style.innerHTML("Padmasri");
+        document.getElementById("demo").innerHTML="I am currently pursing CSE and interested in web development";
+        document.getElementById("demo").style.backgroundColor="lightblue";
+        function changecolor(){
+            document.body.style.background="red";
+        }
+        let count=0;
+        function increase(){
+            count++;
+            document.getElementById("cnt").innerHTML=count;
+        }
+        function decrease(){
+            count--;
+            document.getElementById("cnt").innerHTML=count;
+        }
+    </script>
 </body>
 </html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login form</title>
+
+    <style>
+        body{
+            margin:0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(120deg,#1174cb,#54def4);
+            height:100vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+        }
+        
+        .login-box{
+            background:white;
+            padding:30px;
+            width:320px;
+            border-radius:12px;
+            box-shadow:0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        .login-box h2{
+            text-align:center;
+            margin:bottom 20px;
+        }
+
+        .login-box label{
+            font-weight:bold;
+            display:block;
+            margin-top:10px;
+        }
+
+        .login-box input{
+            width:100%;
+            padding:10px;
+            margin-top:5px;
+            border-radius:6px;
+            border:1px solid #ccc;
+            font-size:14px;
+        }
+        
+        .password-field{
+            position:relative;
+        }
+
+        .toggle-btn{
+            position:absolute;
+            right:10px;
+            top:50%;
+            transform:translate(-50%);
+            cursor:pointer;
+            font-size:13px;
+            color:white;
+            user-select:none;
+        }
+
+        .login-btn{
+            width:100%;
+            margin-top:20px;
+            padding:12px;
+            border:none;
+            background:#2575fc;
+            color:white;
+            font-size:16px;
+            border-radius:6px;
+        }
+
+        .login-btn{
+            font-size:16px;
+            border-radius:6px;
+            cursor:pointer;
+        }
+
+        .login-btn:hover{
+            background:#1a5be0;
+        }
+</style>
+</head>
+
+<body>
+
+<div class="login-box">
+    <h2>Login</h2>
+
+    <form>
+        <label>Username</label>
+        <input type="text" placeholder="Enter Username" required>
+        
+        <label>Email</label>
+        <input type="email" placeholder="Enter email" required>
+
+        <label>Password</label>
+        <div class="password-field">
+            <input type="password" id="password" placeholder="Enter password" required>
+            <span class="toggle-btn" onclick="togglePassword()">Show</span>
+        </div>
+
+        <button type="submit" class="login-btn">Login</button>
+    </form>
+</div>
+
+<script>
+    function togglePassword(){
+        var pass = document.getElementById("password");
+        var btn = document.querySelector(".toggle-btn");
+
+        if(pass.type==="password"){
+            pass.type="text";
+            btn.textContent="Hide";
+        }else{
+            pass.type="password";
+            btn.textContent="Show";
+        }
+    }
+function validatelogin(){
+    var Username = document.getElementById("username").value;
+    var email = document.getElementById("email").value;
+    var password = document.getElementById("password").value;
+
+    if(Username==="admin" &&
+        email==="abcd28@gmail.com" &&
+        password==="12345")
+    {
+        alert("Login successfully");
+    }
+    else
+    {
+        alert("Invalid email or password and username incorrect");
+    }
+}
+</script>
+
+</body>
+</html>
