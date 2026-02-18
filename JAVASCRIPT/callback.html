@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CallBack Function</title>
+</head>
+<body>
+    <script>
+        function fetchdata(callback){
+            console.log("fetching data");
+            callback();
+        }
+        function processdata(){
+            console.log("processing data");
+        }
+        fetchdata(processdata);
+
+        const demo=(a,b)=> a+b;
+        console.log(demo(65,89));
+
+        const demo1=()=>{
+            console.log("demo arrow function");
+        }
+        demo1()
+    </script>
+</body>
+</html>
+    
